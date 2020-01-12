@@ -64,6 +64,26 @@
     <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-20 text-center" style="background-color: #E5CDAD">
         <div>
             <h2 class="text-3xl leading-tight font-bold py-8 text-yellow-900">How Treeware Works?</h2>
+
+            <div class="text-yellow-900">
+                <p class="mb-4">
+                    We have partnered with <a href="https://offset.earth">Offset.Earth</a> who plant trees & fund the world’s best climate crisis solutions.
+                </p>
+
+                <p class="mb-12">
+                    We created Treeware so that people like you can actually take on the climate crisis
+                </p>
+            </div>
+
+
+
+            {{--<p class="mb-4">--}}
+                {{--It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to plant trees. They are also crucial to preventing ecological collapse.--}}
+            {{--</p>--}}
+
+            {{--Offset.Earth use a tree planting partner <a href="https://edenprojects.org/">The Eden Reforestation Projects</a> who plant millions of trees around the world each month. Treeware are currently supporting their incredible work in <a href="https://offset.earth/projects/mangrove-planting-in-madagascar">Madagascar</a>.--}}
+            {{--</p>--}}
+
         </div>
 
 
@@ -139,6 +159,11 @@
     <section class="relative bg-green-800 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 p-32">
 
         <div class="w-full text-center">
+
+            <p class="text-white text-3xl italic pb-32">
+                &quot; We’re amassing a collective of packages built by awesome people in all corners of the world who want to use their skills to have a direct impact on climate action. &quot;
+            </p>
+
             <a href="https://offset.earth/treeware" target="_blank" rel="noopener noreferrer" title="View our Offset Earth profile" style="width:200px;display:inline-block;">
                 <img alt="We offset our carbon footprint via Offset Earth" src="https://toolkit.offset.earth/carbonpositiveworkforce/badge/5e186e68516eb60018c5172b?white=true&landscape=true" style="width:200px;" />
             </a>
@@ -148,16 +173,13 @@
 
     <!-- start cta -->
     {{--<section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">--}}
-        {{--<div class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">--}}
+        {{--<div class="flex flex-col md:flex-row items-center justify-between bg-green-800  px-12 py-10 rounded-lg shadow-lg">--}}
             {{--<div class="w-full md:w-2/3">--}}
                 {{--<h2 class="text-3xl leading-tight font-bold">Need help?</h2>--}}
                 {{--<p class="mt-2 md:max-w-md">Contact our Customer Support that is always ready to help you with any possible questions, problems or--}}
                     {{--information.</p>--}}
             {{--</div>--}}
 
-            {{--<div class="w-full md:w-1/3 md:text-right mt-6 md:mt-0">--}}
-                {{--<a href="#" class="inline-block px-6 py-4 bg-blue-600 text-white rounded-lg">Go to Support</a>--}}
-            {{--</div>--}}
         {{--</div>--}}
     {{--</section>--}}
     <!-- end cta -->
