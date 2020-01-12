@@ -14,6 +14,17 @@
 
     <title>Treeware, software distribution supporting a sustainable future.</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            font-family: 'Montserrat', sans-serif;
+
+
+        }
+    </style>
+
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -72,9 +83,9 @@
                     We have partnered with <a href="https://offset.earth">Offset.Earth</a> who plant trees & fund the world’s best climate crisis solutions.
                 </p>
 
-                <p class="mb-12">
-                    We created Treeware so that people like you can actually take on the climate crisis
-                </p>
+                {{--<p class="mb-12">--}}
+                    {{--We created Treeware so that people like you can actually take on the climate crisis--}}
+                {{--</p>--}}
             </div>
 
 
@@ -94,7 +105,7 @@
 
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-8">
                         <div class="font-bold text-xl mb-2">1. Opensource Package</div>
                         <p class="text-gray-700 text-base leading-loose">
                             You have an Opensource package and you would like to help support a sustainable future. You continue to offer your package under your current licence (e.g. MIT).
@@ -105,7 +116,7 @@
 
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-8">
                         <div class="font-bold text-xl mb-2">2. Add Treeware</div>
                         <p class="text-gray-700 text-base leading-loose">
                             Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forrest on Offset.Earth.
@@ -116,7 +127,7 @@
 
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-8">
                         <div class="font-bold text-xl mb-2">3. Watch our forrest grow!</div>
                         <p class="text-gray-700 text-base leading-loose">
                             When people use your package we hope they will support you by buying the world a few trees. In turn you’ll help to accelerate our transition to a sustainable future.
@@ -128,7 +139,9 @@
         </div>
 
         <div class="mt-12 md:mt-20 w-full md:max-w-3xl mx-auto">
-            <p class="text-xl text-yellow-900">&ldquo;I've seen a big uplift in people adding methods of accepting payments to their opensource packages. I think there is a place for this but it didn’t sit well for me and for the small packages I have released. I loved the idea of Postcardware but it still didn’t feel right for me. When I read about Phil Sturgeon work with Offset.Earth I knew this was exactly the right fit for me and Treeware was born.&rdquo;</p>
+            <p class="text-xl text-yellow-900 italic">
+                &ldquo;I've seen a big uplift in people adding methods of accepting payments to their opensource packages. I think there is a place for this but it didn’t sit well for me and for the small packages I have released. I loved the idea of Postcardware but it still didn’t feel right for me. When I read about Phil Sturgeon work with Offset.Earth I knew this was exactly the right fit for me and Treeware was born.&rdquo;
+            </p>
             <p class="text-xl font-bold text-green-700 mt-4">James Mills</p>
             <p class="text-sm uppercase tracking-wider text-yellow-700">Treeware.Earth</p>
         </div>
@@ -162,7 +175,7 @@
 
         <div class="w-full text-center">
 
-            <p class="text-white text-3xl italic pb-32">
+            <p class="text-white text-3xl italic pb-32" >
                 &quot; We’re amassing a collective of packages built by awesome people in all corners of the world who want to use their skills to have a direct impact on climate action. &quot;
             </p>
 
