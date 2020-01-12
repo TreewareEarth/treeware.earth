@@ -72,10 +72,9 @@
 
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
-                    <img class="w-full" src="/img/tree_three.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">1. Opensource Package</div>
-                        <p class="text-gray-700 text-base">
+                        <p class="text-gray-700 text-base leading-loose">
                             You have an Opensource package and you would like to help support a sustainable future. You continue to offer your package under your current licence (e.g. MIT).
                         </p>
                     </div>
@@ -84,10 +83,9 @@
 
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
-                    <img class="w-full" src="/img/tree_three.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">2. Add Treeware licence</div>
-                        <p class="text-gray-700 text-base">
+                        <p class="text-gray-700 text-base leading-loose">
                             Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forrest on Offset.Earth.
                         </p>
                     </div>
@@ -96,73 +94,54 @@
 
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
-                    <img class="w-full" src="/img/tree_three.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">3. Watch our forrest grow!</div>
-                        <p class="text-gray-700 text-base">
+                        <p class="text-gray-700 text-base leading-loose">
                             When people use your package we hope they will support you by buying the world a few trees. In turn you’ll help to accelerate our transition to a sustainable future.
                         </p>
                     </div>
                 </div>
             </div>
 
-
-
-
-              {{--<div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">--}}
-                {{--<img class="w-full" src="img/tree_one.jpg" alt="Sunset in the mountains">--}}
-                {{--<div class="px-6 py-4">--}}
-                    {{--<div class="font-bold text-xl mb-2">1. Opensource Package</div>--}}
-                    {{--<p class="text-gray-700 text-base">--}}
-                        {{--You have an Opensource package and you would like to help support a sustainable future. You can continue to offer your package under your current licence (e.g. MIT).--}}
-                    {{--</p>--}}
-                {{--</div>--}}
-
-
-
-            {{--<div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
-                {{--<img src="images/icon-home-2.svg" alt="" class="mx-auto h-32">--}}
-                {{--<h4 class="text-xl font-bold leading-tight mt-8">2. Add Treeware licence</h4>--}}
-                {{--<p class="text-gray-700 mt-2">--}}
-                    {{--Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forrest on Offset.Earth.--}}
-                {{--</p>--}}
-            {{--</div>--}}
-
-            {{--<div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
-                {{--<img src="images/icon-home-3.svg" alt="" class="mx-auto h-32">--}}
-                {{--<h4 class="text-xl font-bold leading-tight mt-8">3. Watch our forrest grow!</h4>--}}
-                {{--<p class="text-gray-700 mt-2">--}}
-                    {{--When people use your package we hope they will support you by buying the world a few trees. In turn you’ll help the highest standard climate projects to accelerate our transition to a sustainable future.--}}
-                {{--</p>--}}
-            {{--</div>--}}
         </div>
 
         <div class="mt-12 md:mt-20 w-full md:max-w-3xl mx-auto">
-            <p class="text-xl">&ldquo;I've seen a big uplift in people adding methods of accepting payments to their opensource packages. I think there is a place for this but it didn’t sit well for me and for the small packages I have released. I loved the idea of Postcardware but it still didn’t feel right for me. When I read about Phil Sturgeon work with Offset.Earth I knew this was exactly the right fit for me and Treeware was born.&rdquo;</p>
+            <p class="text-xl text-yellow-900">&ldquo;I've seen a big uplift in people adding methods of accepting payments to their opensource packages. I think there is a place for this but it didn’t sit well for me and for the small packages I have released. I loved the idea of Postcardware but it still didn’t feel right for me. When I read about Phil Sturgeon work with Offset.Earth I knew this was exactly the right fit for me and Treeware was born.&rdquo;</p>
             <p class="text-xl font-bold text-green-700 mt-4">James Mills</p>
-            <p class="text-sm uppercase tracking-wider text-gray-700">Treeware.Earth</p>
+            <p class="text-sm uppercase tracking-wider text-yellow-700">Treeware.Earth</p>
         </div>
     </section>
     <!-- end how it works -->
 
     <!-- start features -->
-    <section class="relative bg-green-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
+    <section class="relative bg-green-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 p-20">
         <div class="text-center">
             <h2 class="text-3xl leading-tight font-bold text-white">The Treeware "conditions of use"</h2>
         </div>
 
-        <div class="w-full text-center">
+        <div class="w-full lg:w-1/2 mx-auto text-center">
             <div class="py-6 text-white">
                 <p>Below is an sample "conditions of use" which you are free to use in your projects.</p>
             </div>
             <script src="https://gist.github.com/jamesmills/add9a716c17628494e58f684b2615c66.js"></script>
         </div>
 
-        <div class="w-full text-center">
+        <div class="w-1/2 mx-auto text-center">
             <div class="py-6 text-white">
                 <p>Below is the Treeware badge which you can use in your project.</p>
             </div>
             <script src="https://gist.github.com/jamesmills/44504132a6434ee4d00fe66357fec94b.js"></script>
+        </div>
+    </section>
+    <!-- end features -->
+
+    <!-- start features -->
+    <section class="relative bg-green-800 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 p-32">
+
+        <div class="w-full text-center">
+            <a href="https://offset.earth/treeware" target="_blank" rel="noopener noreferrer" title="View our Offset Earth profile" style="width:200px;display:inline-block;">
+                <img alt="We offset our carbon footprint via Offset Earth" src="https://toolkit.offset.earth/carbonpositiveworkforce/badge/5e186e68516eb60018c5172b?white=true&landscape=true" style="width:200px;" />
+            </a>
         </div>
     </section>
     <!-- end features -->
@@ -212,15 +191,7 @@
             <div class="mt-8 sm:w-1/2 sm:mt-0 lg:w-1/3 lg:mt-0">
                 <h6 class="text-sm text-gray-600 font-bold uppercase">Thanks</h6>
                 <ul class="mt-4">
-                    <li>
-                        Photos by <a href="https://unsplash.com/@davidvig?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Vig</a> on<a href="https://unsplash.com/s/photos/tree?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-                        D. Jameson RAGE
-                        https://unsplash.com/@rage_devil_jameson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-
-                        Kyle Glenn
-                        https://unsplash.com/@kylejglenn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-                    </li>
                     <li class="mt-2">
                         <a href="https://www.vecteezy.com/">Tree Illustration by Vecteezy</a>
                     </li>
