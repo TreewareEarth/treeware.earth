@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-    <title>Treeware, Treeware, software distribution supporting a sustainable future.</title>
+    <title>Treeware, software distribution supporting a sustainable future.</title>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -106,7 +106,7 @@
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">2. Add Treeware licence</div>
+                        <div class="font-bold text-xl mb-2">2. Add Treeware</div>
                         <p class="text-gray-700 text-base leading-loose">
                             Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forrest on Offset.Earth.
                         </p>
@@ -206,18 +206,17 @@
                     <li class="mt-2">
                             <a href="https://twitter.com/philsturgeon">Phil Sturgeon</a>, <a href="https://protect.earth/">Protect Earth</a>
                     </li>
-                    <li class="mt-2">
-                        <a href="http://offset.earth/">Offset Earth</a>
-                    </li>
                 </ul>
             </div>
 
             <div class="mt-8 sm:w-1/2 sm:mt-0 lg:w-1/3 lg:mt-0">
                 <h6 class="text-sm text-gray-600 font-bold uppercase">Thanks</h6>
                 <ul class="mt-4">
-
                     <li class="mt-2">
                         <a href="https://www.vecteezy.com/">Tree Illustration by Vecteezy</a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="http://offset.earth/treeware">Offset Earth</a>
                     </li>
                 </ul>
             </div>
