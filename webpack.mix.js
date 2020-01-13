@@ -13,3 +13,23 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+
+/**
+ * Browser Syncnpm
+ * */
+mix.browserSync({
+    proxy: 'https://treeware.dev/',
+    logPrefix: "BrowserSync",
+    online: true,
+    https: true,
+    logConnections: true,
+    reloadOnRestart: true,
+    notify: true,
+    files: [
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'public/js/app.js',
+        'public/css/app.css'
+    ]
+});
