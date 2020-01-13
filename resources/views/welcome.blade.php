@@ -142,7 +142,9 @@
             <p class="text-xl text-yellow-900 italic">
                 &ldquo;I've seen a big uplift in people adding methods of accepting payments to their opensource packages. I think there is a place for this but it didn’t sit well for me and for the small packages I have released. I loved the idea of Postcardware but it still didn’t feel right for me. When I read about Phil Sturgeon work with Offset.Earth I knew this was exactly the right fit for me and Treeware was born.&rdquo;
             </p>
-            <p class="text-xl font-bold text-green-700 mt-4">James Mills</p>
+            <p class="text-xl font-bold text-green-700 mt-4">
+                <a href="https://jamesmills.co.uk">James Mills</a>
+            </p>
             <p class="text-sm uppercase tracking-wider text-yellow-700">Treeware.Earth</p>
         </div>
     </section>
