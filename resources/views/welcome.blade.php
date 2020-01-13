@@ -119,7 +119,7 @@
                     <div class="px-6 py-8">
                         <div class="font-bold text-xl mb-2">2. Add Treeware</div>
                         <p class="text-gray-700 text-base leading-loose">
-                            Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forrest on Offset.Earth.
+                            Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forest on Offset.Earth.
                         </p>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
                     <div class="px-6 py-8">
-                        <div class="font-bold text-xl mb-2">3. Watch our forrest grow!</div>
+                        <div class="font-bold text-xl mb-2">3. Watch our forest grow!</div>
                         <p class="text-gray-700 text-base leading-loose">
                             When people use your package we hope they will support you by buying the world a few trees. In turn you’ll help to accelerate our transition to a sustainable future.
                         </p>
