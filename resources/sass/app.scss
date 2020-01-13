@@ -1,1 +1,19 @@
-//
+#trees-svg {
+    width: 96%;
+    height: 350px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 900px) {
+        height: 300px;
+    }
+
+    @media only screen and (max-width: 638px) {
+        height: 200px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        height: 250px;
+    }
+}
+
+

@@ -10,6 +10,22 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+
+/*
+* Sweet Alert
+* */
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
+
+window.swal = Swal;
+
+
+/*
+* Moments JS
+* */
+
+window.moment = require('moment');
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
