@@ -46,7 +46,7 @@
 
     <!-- start header -->
     <header class="w-full bg-transparent fixed top-0 left-0 z-50 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-6"
-            id="navbar">
+            id="navbar" style="z-index: 1000">
         <nav class="flex items-center justify-between">
             <div class="">
                 <a href='/fair-rate-mortgage/'>
