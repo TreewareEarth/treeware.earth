@@ -11,16 +11,31 @@
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
+    
+    <!-- Primary Meta Tags -->
     <title>Treeware, software distribution supporting a sustainable future.</title>
+    <meta name="title" content="Treeware, software distribution supporting a sustainable future.">
+    <meta name="description" content="Treeware, a new category of software distribution supporting a sustainable future. You've heard of commercial software, open-source, freeware software, now there's Treeware.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://treeware.earth/">
+    <meta property="og:title" content="Treeware, software distribution supporting a sustainable future.">
+    <meta property="og:description" content="Treeware, a new category of software distribution supporting a sustainable future. You've heard of commercial software, open-source, freeware software, now there's Treeware.">
+    <meta property="og:image" content="https://treeware.earth/img/social_sharing_1280x640.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://treeware.earth/">
+    <meta property="twitter:title" content="Treeware, software distribution supporting a sustainable future.">
+    <meta property="twitter:description" content="Treeware, a new category of software distribution supporting a sustainable future. You've heard of commercial software, open-source, freeware software, now there's Treeware.">
+    <meta property="twitter:image" content="https://treeware.earth/img/social_sharing_1280x640.png">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <style type="text/css">
         * {
             font-family: 'Montserrat', sans-serif;
-
-
         }
     </style>
 
