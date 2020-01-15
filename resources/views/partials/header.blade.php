@@ -13,6 +13,7 @@
             </button>
 
             <ul class="menu flex text-xs">
+                <li><a class="mr-2 sm:mr-4 text-blue-800 hover:text-blue-700 font-bold" href="/about">About</a></li>
                 <li><a id="how-it-work-link" class="mr-2 sm:mr-4 text-blue-800 hover:text-blue-700 font-bold" href="{{ ($_SERVER['REQUEST_URI'] == '/') ? 'javascript:void(0)' : '/#how-it-work-section' }}">How It Works</a></li>
                 <li><a id="add-package-link" class="mr-2 sm:mr-4 text-blue-800 hover:text-blue-700 font-bold" href="{{ ($_SERVER['REQUEST_URI'] == '/') ? 'javascript:void(0)' : '/#add-package-section' }}">Add Package</a></li>
                 <li><a class="text-blue-800 hover:text-blue-700 font-bold" href="/packages">Search Package</a></li>
