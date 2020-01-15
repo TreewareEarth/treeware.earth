@@ -13,6 +13,6 @@ class Package extends Model
 
     public function searchableAs()
     {
-        return 'package_name';
+        return config('scout.prefix').'package_name';
     }
 }
