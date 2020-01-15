@@ -12,8 +12,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/components.css" rel="stylesheet">
-
     <!-- Primary Meta Tags -->
     <title>Treeware, software distribution supporting a sustainable future.</title>
     <meta name="title" content="Treeware, software distribution supporting a sustainable future.">
