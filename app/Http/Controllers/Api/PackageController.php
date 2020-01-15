@@ -45,6 +45,8 @@ class PackageController extends Controller
 
         event(new NewPackageCreated($package));
 
+        return $package;
+
     }
 
 }
