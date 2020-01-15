@@ -6,7 +6,7 @@
         <div class="text-center mb-8 pt-6 md:pt-8 ">
             <h2 class="relative text-2 md:text-3xl leading-tight font-bold text-white">
                 <a href="/" class="package-listing-page-tree"></a>
-                Search TreeWare Package
+                Search Treeware Package
             </h2>
         </div>
         <div id="app" class="relative max-w-4xl" style="margin: 0 auto;">
