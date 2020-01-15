@@ -7,7 +7,7 @@
             <h2 class="text-3xl leading-tight font-bold py-8">About Treeware</h2>
 
             <p class="pb-6">
-                We have partnered with <a href="https://offset.earth?r=5e186e68516eb60018c5172b">Offset Earth</a> to
+                We have partnered with <a class="underline" href="https://offset.earth?r=5e186e68516eb60018c5172b">Offset Earth</a> to
                 plant trees & fund the world’s best climate crisis solutions. We chose Offset Earth because they operate
                 transparently with a minimal service fee, which they reinvest to spread the message through social
                 marketing.
@@ -28,22 +28,21 @@
             </p>
 
             <p class="pb-6">
-                We have seen a big uplift in other methods like <a href="https://www.patreon.com">Patreon</a> and <a
+                We have seen a big uplift in other methods like <a class="underline" href="https://www.patreon.com">Patreon</a> and <a
                     href="https://github.com/sponsors">Github Sponsors</a> to get monetary support for the work you put
                 into open-source projects.
             </p>
 
             <p class="pb-6">
-            Treeware began when <a href="https://twitter.com/jamesmills">James Mills</a> and <a
-                    href="https://twitter.com/philsturgeon">Phil Sturgeon</a>  were talking about Phil’s work on Protect Earth and his
-                <a href="https://offset.earth/articles/climate-emergency/climate-change-by-bike">crazy solo European bike-tour fundraiser for Offset Earth</a>. James asked about a new “Buy me a tree” badge on
+            Treeware began when <a class="underline" href="https://twitter.com/jamesmills">James Mills</a> and <a class="underline" href="https://twitter.com/philsturgeon">Phil Sturgeon</a>  were talking about Phil’s work on Protect Earth and his
+                <a class="underline" href="https://offset.earth/articles/climate-emergency/climate-change-by-bike">crazy solo European bike-tour fundraiser for Offset Earth</a>. James asked about a new “Buy me a tree” badge on
             one of Phils GitHub repositories, and in a spin on open-source
-                <a href="https://freek.dev/531-our-packages-are-now-postcardware">Postcardware</a> (made famous in the Laravel
-            community by <a href="https://twitter.com/freekmurze">Freek</a> from Spatie) the idea of Treeware was born.
+                <a class="underline" href="https://freek.dev/531-our-packages-are-now-postcardware">Postcardware</a> (made famous in the Laravel
+            community by <a class="underline" href="https://twitter.com/freekmurze">Freek</a> from Spatie) the idea of Treeware was born.
             </p>
 
             <p class="pb-6">
-            You can find our website at <a href="https://treeware.earth">treeware.earth</a> which gives you all the information you need to get
+            You can find our website at <a class="underline" href="https://treeware.earth">treeware.earth</a> which gives you all the information you need to get
             started and turn your open-source project into Treeware. We have also created a simple way for you to submit
             your packages once you have added the Treeware “conditions of use” text. We’re building a collective of
             packages developed by awesome people in all corners of the world who want to use their skills to have a
