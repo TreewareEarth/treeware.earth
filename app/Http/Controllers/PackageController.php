@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-class WelcomeController extends Controller
+class PackageController extends Controller
 {
     public function index() {
 
-        return view('welcome');
-
+        return view('packages');
     }
 }

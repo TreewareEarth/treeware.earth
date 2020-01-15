@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('/packages/{page?}', 'PackageController@index');
