@@ -13,3 +13,4 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/packages/{page?}', 'PackageController@index');
+Route::get('/about', 'AboutController@index')->name('about');
