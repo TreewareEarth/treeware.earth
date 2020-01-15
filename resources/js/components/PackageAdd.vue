@@ -126,7 +126,7 @@
                 }
             },
             moment(date) {
-                return moment(date).toNow(true)
+                return moment(date).utc().toNow(true)
             }
         }
     }
