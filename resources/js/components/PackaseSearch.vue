@@ -22,7 +22,7 @@
             return {
                 searchClient: algoliasearch(
                     process.env.MIX_ALGOLIA_APP_ID,
-                    process.env.MIX_ALGOLIA_SECRET
+                    process.env.MIX_ALGOLIA_SECRET_SEARCH_ONLY
                 ),
             };
         },
