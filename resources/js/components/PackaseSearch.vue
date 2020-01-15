@@ -4,9 +4,8 @@
         <br><br>
         <ais-hits>
             <a :href="item.package_url" target="_blank" class="flex align-middle" slot="item" slot-scope="{ item }">
-                <img class="w-10 h-10 rounded-full mr-4 " :src="item.owner_avatar_url" :alt="item.owner">
-                <span class="leading-3 mt-2">{{ item.owner }}</span>
-                <span class="ml-6 mt-2 hidden sm:block">{{ item.owner }} / {{ item.package_name }}</span>
+                <img class="w-10 h-10 rounded-full" :src="item.owner_avatar_url" :alt="item.owner">
+                <span class="ml-4 mt-2 sm:block">{{ item.owner }}/{{ item.package_name }}</span>
             </a>
         </ais-hits>
         <div class="pagination"><ais-pagination /></div>
@@ -22,7 +21,7 @@
             return {
                 searchClient: algoliasearch(
                     process.env.MIX_ALGOLIA_APP_ID,
-                    process.env.MIX_ALGOLIA_SECRET
+                    process.env.MIX_ALGOLIA_SECRET_SEARCH_ONLY
                 ),
             };
         },
@@ -91,7 +90,7 @@
                 background: url('/img/algolia.png') no-repeat center;
                 background-size: contain;
                 right: 0px;
-                top: 15px;
+                top: 18px;
             }
         }
         .ais-SearchBox-input {
