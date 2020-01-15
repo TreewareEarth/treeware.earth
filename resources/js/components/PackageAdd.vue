@@ -20,7 +20,7 @@
         </form>
 
         <section class="flex flex-wrap justify-center  lg:-mx-2 mt-12">
-            <a v-for="(packagedata, index) in recentPackages.slice(0, recentPackagesLimitProp)" :href="packagedata.package_url"  class="flex flex-col w-full lg:w-1/4 mt-2 lg:mt-0  overflow-hidden lg:my-2 lg:px-2 shadow-lg cursor-pointer px-2 scale--" target="_blank">
+            <a v-for="(packagedata, index) in recentPackages.slice(0, paginationRecordsLimit)" :href="packagedata.package_url"  class="flex flex-col w-full lg:w-1/4 mt-2 lg:mt-0  overflow-hidden lg:my-2 lg:px-2 shadow-lg cursor-pointer px-2 scale--" target="_blank">
                 <div class="rounded overflow-hidden shadow-lg bg-white h-full">
                     <div class="px-6 py-8">
                         <div class="font-bold text-l mb-2 whitespace-no-wrap">{{ packagedata.owner + ' / ' + packagedata.package_name  }}</div>
@@ -45,22 +45,29 @@
 
     export default {
         name: 'packageAdd',
-        props: {
-            recentPackagesProp: Array,
-            recentPackagesLimitProp: Number
-        },
         data: function() {
             return {
                 packageUrlInput: '',
                 packageUrlValidated: true,
                 submitBtnText: 'Submit',
                 recentPackages: [],
+                paginationPageNumber: 0,
+                paginationRecordsLimit: 4,
             }
         },
-        created() {
-            this.recentPackages = this.recentPackagesProp;
+        mounted() {
+            this.fetchPackages();
         },
         methods: {
+            fetchPackages() {
+                axios.get('/api/package/' + this.paginationPageNumber).then(res => {
+                    (res.data.packages).forEach( (data)=> {
+                        this.recentPackages.push(data);
+                    });
+                }).catch(err => {
+                    console.log('package api not responding ! '+ err)
+                });
+            },
             async submit() {
                 if(this.packageUrlInput != '' && this.validURL(this.packageUrlInput) && this.submitBtnText == 'Submit') {
 
@@ -69,8 +76,6 @@
                     await axios.post('/api/package', {
                         package_url: this.packageUrlInput
                     }).then(res => {
-
-                        console.log(res);
 
                         this.recentPackages.unshift(res.data);
                         this.packageUrlInput = '';
@@ -83,7 +88,6 @@
                                 heightAuto: false
                             });
                         }, 1000)
-
 
                     }).catch(err => {
 
@@ -108,7 +112,6 @@
             validURL(str) {
                 var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
                 if(!regex .test(str)) {
-
 
                     window.swal.fire({
                         title: "Error !",
