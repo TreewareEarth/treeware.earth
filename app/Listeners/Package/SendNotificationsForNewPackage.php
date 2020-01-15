@@ -20,10 +20,10 @@ class SendNotificationsForNewPackage
      */
     public function handle(NewPackageCreated $event)
     {
-//        if (!app()->environment('local')) {
+        if (!app()->environment('local')) {
             Notification::route('telegram', config('services.telegram-bot-api.channel'))
                 ->notify(new NewPackageNotification($event->package));
-//        }
+        }
 
     }
 }

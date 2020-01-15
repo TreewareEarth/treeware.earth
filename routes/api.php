@@ -21,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  * add package
  */
 Route::post('/package', 'Api\PackageController@store');
+Route::get('/package/{page?}/{limit?}', 'Api\PackageController@index');
+
