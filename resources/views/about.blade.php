@@ -3,7 +3,7 @@
 
     <!-- start about -->
     <section class="w-full bg-blue-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-20">
-        <div class="text-blue-800">
+        <div class="text-blue-800 md:w-1/2  m-auto">
             <h2 class="text-3xl leading-tight font-bold py-8">About Treeware</h2>
 
             <p class="pb-6">

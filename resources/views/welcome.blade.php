@@ -83,6 +83,20 @@
             </p>
             <p class="text-sm uppercase tracking-wider text-yellow-700">Treeware.Earth</p>
         </div>
+
+
+        <div class="mt-12 w-1/2 m-auto">
+
+            <h2 class="text-3xl leading-tight font-bold py-8 text-yellow-900">Share with the world</h2>
+
+            <ul class="flex items-center text-yellow-900" style="font-size: 3em">
+                <li class="flex-1 text-center"><a href="https://www.facebook.com/sharer/sharer.php?u=https://treeware.earth" target="_blank"><span class="fa fa-facebook-official"></span></a></li>
+                <li class="flex-1 text-center"><a href="https://twitter.com/intent/tweet?text=Treeware&amp;url=https://treeware.earth"><span class="fa fa-twitter"></span></a></li>
+                <li class="flex-1 text-center"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://treeware.earth&amp;title=Treeware&amp;summary=Treeware is a style of software distribution, distributed by the author on the condition that users buy the author a tree."><span class="fa fa-linkedin"></span></a></li>
+                <li class="flex-1 text-center"><a href="https://wa.me/?text=https://treeware.earth"><span class="fa fa-whatsapp"></span></a></li>
+            </ul>
+        </div>
+
     </section>
     <!-- end how it works -->
 
