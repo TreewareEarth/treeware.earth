@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('/packages/{page?}', 'PackageController@index');
-Route::get('/about', 'AboutController@index')->name('about');
+Route::domain(config('app.url'))->group(function () {
+    Route::get('/', 'WelcomeController@index');
+    Route::get('/packages/{page?}', 'PackageController@index');
+    Route::get('/about', 'AboutController@index')->name('about');
+});
+
+
+Route::domain('click.' . config('app.url'))->group(function () {
+    Route::get('/{owner}/{package_name}', [\App\Http\Controllers\ClickController::class, 'index'])->name('click');
+});
+

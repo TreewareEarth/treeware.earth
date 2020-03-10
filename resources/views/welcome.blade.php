@@ -3,7 +3,7 @@
 
     <!-- start hero section -->
     <section class="relative bg-blue-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-12 pb-24 sm:pb-64 md:pt-26 md:pb-48 lg:pt-32 xl:pb-48 2xl:pt-48 2xl:pb-96 text-center sm:text-left">
-        <div>
+        <div class="container mx-auto">
             <div class="relative w-full sm:w-2/3 lg:w-1/2 z-10" style="z-index:900;">
                 <h1 class="text-3xl lg:text-4xl xl:text-5xl leading-tight font-bold text-blue-800">Treeware</h1>
                 <p class="text-base leading-snug text-gray-700 mt-4 text-blue-800 text-xl">Treeware is a style of software distribution similar to Postcardware, distributed by the author on the condition that users buy the author a tree.</p>

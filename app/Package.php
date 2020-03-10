@@ -11,6 +11,12 @@ class Package extends Model
 
     protected $guarded = [];
 
+
+    public function clicks()
+    {
+        return $this->hasMany(Click::class);
+    }
+
     public function searchableAs()
     {
         return config('scout.prefix').'package_name';
