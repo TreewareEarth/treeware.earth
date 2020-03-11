@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Package;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Torann\GeoIP\GeoIP;
 
 class ClickController extends Controller
 {
     public function index(Request $request)
     {
 
-        $package = Package::query()
-            ->whereOwner($request->route('owner'))
-            ->wherePackageName($request->route('package_name'))
-            ->firstOrFail();
+        try {
+
+
+            $package = Package::query()
+                ->whereOwner($request->route('owner'))
+                ->wherePackageName($request->route('package_name'))
+                ->firstOrFail();
+
+        } catch (ModelNotFoundException $e) {
+            return view('notfound', [
+                'owner' => $request->route('owner'),
+                'package_name' => $request->route('package_name'),
+            ]);
+        }
 
         $geoIp = geoip()->getLocation($request->server->get('REMOTE_ADDR'));
 
