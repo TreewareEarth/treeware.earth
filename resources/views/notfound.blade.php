@@ -20,7 +20,7 @@
                 </h3>
                 <div class="mt-2 max-w-xl text-sm leading-5 text-gray-500">
                     <p>
-                        Once you have added the Treeware "conditions of use" to your package README. You can then add the package to the Treeware website. Once this has been done this link will work.
+                        Nearly there! Please add the Treeware "conditions of use" to your package README, then add the package to the Treeware website. Once this has been done this link will redirect users to Offset.Earth! 🌳😎🌳
                     </p>
                 </div>
                 <div class="mt-5">
