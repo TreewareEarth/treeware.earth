@@ -18,7 +18,7 @@ Route::domain(config('app.url'))->group(function () {
 });
 
 
-Route::domain('click.' . config('app.url'))->group(function () {
+Route::domain('plant.' . config('app.url'))->group(function () {
     Route::get('/{owner}/{package_name}', [\App\Http\Controllers\ClickController::class, 'index'])->name('click');
 });
 
