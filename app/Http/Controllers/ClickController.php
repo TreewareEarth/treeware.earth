@@ -17,7 +17,7 @@ class ClickController extends Controller
         $package = Package::query()
             ->whereOwner($request->route('owner'))
             ->wherePackageName($request->route('package_name'))
-            ->firstOrFail();
+            ->first();
 
         $geoIp = geoip()->getLocation($request->server->get('REMOTE_ADDR'));
 
