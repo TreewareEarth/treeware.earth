@@ -126,7 +126,11 @@
                 }
             },
             moment(date) {
-                return moment(date).utc().toNow(true)
+
+                let now = moment.utc(new Date());
+                let end = moment.utc(date);
+
+                return moment.duration(end.diff(now)).humanize();
             }
         }
     }
