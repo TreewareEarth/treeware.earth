@@ -29,7 +29,7 @@ class PackageController extends Controller
 
         if ($content = (new PackageExplorer())->getJsonFileContent($request->get('package_url'))) {
             $description = $content['description'];
-        } elseif ($description = (new PackageExplorer())->getJsonFileContent($request->get('package_url'), 'package')) {
+        } elseif ($content = (new PackageExplorer())->getJsonFileContent($request->get('package_url'), 'package')) {
             $description = $content['description'];
         } else {
             $description = $github_info['description'];
