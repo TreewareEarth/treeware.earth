@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ais-instant-search :search-client="searchClient" index-name="dev_package_name">
+        <ais-instant-search :search-client="searchClient" index-name="package_name">
             <ais-search-box placeholder="Owner Name / Package Name " class="searchbox" />
             <br><br>
             <ais-hits>
