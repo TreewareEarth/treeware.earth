@@ -18,7 +18,7 @@ class PackageController extends Controller
 
         return [
             'total_packages' => Package::count(),
-            'packages' => Package::orderBy('created_at', 'desc')->skip($pagination_start)->take($limit)->get()
+            'packages' => Package::withCount('clicks')->orderBy('created_at', 'desc')->skip($pagination_start)->take($limit)->get()
         ];
     }
 

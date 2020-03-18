@@ -11,6 +11,14 @@ class Package extends Model
 
     protected $guarded = [];
 
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        $array['clicks'] = (int) $this->clicks()->count();
+
+        return $array;
+    }
 
     public function clicks()
     {
