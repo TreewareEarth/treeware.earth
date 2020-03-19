@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\Package\CreatePackageIfHasLicence;
 use App\Package;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
@@ -12,11 +13,12 @@ class ClickController extends Controller
     public function index(Request $request)
     {
 
-        $hash = md5($request->route('owner') . $request->route('package_name'));
+        $owner = $request->route('owner', 'empty');
+        $package_name = $request->route('package_name', 'empty');
 
         $package = Package::query()
-            ->whereOwner($request->route('owner'))
-            ->wherePackageName($request->route('package_name'))
+            ->whereOwner($owner)
+            ->wherePackageName($package_name)
             ->first();
 
         $geoIp = geoip()->getLocation($request->server->get('REMOTE_ADDR'));
@@ -34,13 +36,14 @@ class ClickController extends Controller
                 'longitude' => $geoIp['lon'],
                 'timezone' => $geoIp['timezone']
             ]);
+        } else {
+            // TODO if NO $package then email James to tell him
+
+            // TODO if NO $package then lets' run a check to see if the package does have Treeware then we can auto add it
+            dispatch(new CreatePackageIfHasLicence('https://github.com/' . $owner . '/' . $package_name));
         }
 
-        // TODO if NO $package then email James to tell him
-
-        // TODO if NO $package then lets' run a check to see if the package does have Treeware then we can auto add it
-
-        return redirect()->to('https://offset.earth/treeware?gift-trees&ref=' . $hash);
+        return redirect()->to('https://offset.earth/treeware?gift-trees&ref=' . md5(Str::lower($owner . '/' . $package_name)));
 
     }
 }
