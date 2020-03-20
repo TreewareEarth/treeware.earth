@@ -44,7 +44,7 @@ class AddLocationColumnsToClicksTable extends Migration
                 'city',
                 'state',
                 'state_name',
-                'postal_code'
+                'postal_code',
             ]);
         });
     }

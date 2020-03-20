@@ -3,13 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Actions\Package\CreatePackageAction;
-use App\Events\Package\NewPackageCreated;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Package\ValidatePackageRequest;
 use App\Package;
-use App\Services\Github\PackageExplorer;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class PackageController extends Controller
 {
@@ -19,7 +16,7 @@ class PackageController extends Controller
 
         return [
             'total_packages' => Package::count(),
-            'packages' => Package::withCount('clicks')->orderBy('created_at', 'desc')->skip($pagination_start)->take($limit)->get()
+            'packages' => Package::withCount('clicks')->orderBy('created_at', 'desc')->skip($pagination_start)->take($limit)->get(),
         ];
     }
 
@@ -27,5 +24,4 @@ class PackageController extends Controller
     {
         return (new CreatePackageAction())->execute($request->get('package_url'));
     }
-
 }

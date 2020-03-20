@@ -35,21 +35,20 @@ class CreatePackageIfHasLicence implements ShouldQueue
      */
     public function handle()
     {
-
         Log::info('Inside the job to check a package to see if it has Treeware.');
 
         $validator = Validator::make([
-            'package_url' => $this->package_url
+            'package_url' => $this->package_url,
         ], [
-            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new Treeware]
+            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new Treeware],
         ]);
 
         if ($validator->fails()) {
             Log::info('Validation failed, moving on...');
+
             return null;
         }
 
         $package = (new CreatePackageAction())->execute($this->package_url);
-
     }
 }

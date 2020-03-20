@@ -9,13 +9,14 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Notification;
 
-class SendNotificationsForNewPackage
+class SendNotificationsForNewPackage implements ShouldQueue
 {
+    use InteractsWithQueue;
 
     /**
      * Handle the event.
      *
-     * @param  Package $event
+     * @param Package $event
      * @return void
      */
     public function handle(NewPackageCreated $event)
@@ -24,6 +25,5 @@ class SendNotificationsForNewPackage
             Notification::route('telegram', config('services.telegram-bot-api.channel'))
                 ->notify(new NewPackageNotification($event->package));
         }
-
     }
 }

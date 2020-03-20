@@ -3,8 +3,6 @@
 namespace App\Rules;
 
 use App\Services\Github\PackageExplorer;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
 use Illuminate\Contracts\Validation\Rule;
 
 class CheckGithubReadmeFile implements Rule
