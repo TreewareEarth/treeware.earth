@@ -5,14 +5,13 @@ namespace App\Notifications\Package;
 use App\Package;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Telegram\TelegramChannel;
 use NotificationChannels\Telegram\TelegramMessage;
 use NotificationChannels\Twitter\TwitterChannel;
 use NotificationChannels\Twitter\TwitterStatusUpdate;
 
-class NewPackageNotification extends Notification
+class NewPackageNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 

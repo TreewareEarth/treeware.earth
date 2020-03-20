@@ -9,13 +9,14 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Notification;
 
-class SendNotificationsForNewPackage
+class SendNotificationsForNewPackage implements ShouldQueue
 {
+    use InteractsWithQueue;
 
     /**
      * Handle the event.
      *
-     * @param  Package $event
+     * @param Package $event
      * @return void
      */
     public function handle(NewPackageCreated $event)
