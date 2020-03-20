@@ -25,6 +25,5 @@ class SendNotificationsForNewPackage implements ShouldQueue
             Notification::route('telegram', config('services.telegram-bot-api.channel'))
                 ->notify(new NewPackageNotification($event->package));
         }
-
     }
 }

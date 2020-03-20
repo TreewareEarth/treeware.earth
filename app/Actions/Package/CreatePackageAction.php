@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Log;
 
 class CreatePackageAction
 {
-
     public function execute($package_url): Package
     {
         Log::info('Creating a package inside CreatePackageAction');
@@ -30,12 +29,11 @@ class CreatePackageAction
             'package_name' => $github_info['name'],
             'owner_avatar_url' => $github_info['owner']['avatar_url'],
             'description' => $description,
-            'package_url' => $package_url
+            'package_url' => $package_url,
         ]);
 
         event(new NewPackageCreated($package));
 
         return $package;
     }
-
 }

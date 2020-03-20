@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Jobs\Package\CreatePackageIfHasLicence;
 use App\Package;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -12,7 +11,6 @@ class ClickController extends Controller
 {
     public function index(Request $request)
     {
-
         $owner = $request->route('owner', 'empty');
         $package_name = $request->route('package_name', 'empty');
 
@@ -34,7 +32,7 @@ class ClickController extends Controller
                 'postal_code' => $geoIp['postal_code'],
                 'latitude' => $geoIp['lat'],
                 'longitude' => $geoIp['lon'],
-                'timezone' => $geoIp['timezone']
+                'timezone' => $geoIp['timezone'],
             ]);
         } else {
             // TODO if NO $package then email James to tell him
@@ -44,6 +42,5 @@ class ClickController extends Controller
         }
 
         return redirect()->to('https://offset.earth/treeware?gift-trees&ref=' . md5(Str::lower($owner . '/' . $package_name)));
-
     }
 }

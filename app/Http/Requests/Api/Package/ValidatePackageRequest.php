@@ -34,7 +34,7 @@ class ValidatePackageRequest extends FormRequest
          */
 
         return [
-            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new Treeware]
+            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new Treeware],
         ];
     }
 
