@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Package;
-use http\Client;
+use GuzzleHttp\Client as Client;
 use Illuminate\Console\Command;
 
 class SyncPackageTreeCount extends Command
@@ -13,14 +13,14 @@ class SyncPackageTreeCount extends Command
      *
      * @var string
      */
-    protected $signature = 'sync';
+    protected $signature = 'sync:offset-earth:package-tree-count';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Command to sync package tree count from Offset.Earth API';
 
     /**
      * Create a new command instance.
@@ -42,7 +42,7 @@ class SyncPackageTreeCount extends Command
         $packages = Package::all();
 
         foreach ($packages as $package) {
-            $response = (new \GuzzleHttp\Client())->request('get', 'https://x.api.offset.earth/users/treeware/trees', [
+            $response = (new Client())->request('get', 'https://api.offset.earth/users/treeware/trees', [
                 'query' => [
                     'ref' => md5($package->owner . '/' . $package->package_name),
                 ],
