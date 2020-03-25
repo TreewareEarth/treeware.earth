@@ -5,6 +5,7 @@ namespace App\Services\Github;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use Illuminate\Support\Arr;
 
 class PackageExplorer
 {
@@ -12,7 +13,7 @@ class PackageExplorer
     {
         $response = (new Client())->request(
             'GET',
-            'https://raw.githubusercontent.com' . (parse_url($url)['path']) . '/master/README.md'
+            'https://raw.githubusercontent.com' . (parse_url($url)['path']) . '/' . $this->getDefaultBranch($url) . '/README.md'
         );
 
         return strpos(strtolower(($response->getBody())->getContents()), $text) == true;
@@ -23,7 +24,7 @@ class PackageExplorer
         try {
             $response = (new Client())->request(
                 'GET',
-                'https://raw.githubusercontent.com' . (parse_url($url)['path']) . '/master/' . $filename . '.json',
+                'https://raw.githubusercontent.com' . (parse_url($url)['path']) . '/' . $this->getDefaultBranch($url) . '/' . $filename . '.json',
                 [
                     'stream' => true,
                 ]
@@ -64,5 +65,12 @@ class PackageExplorer
         } catch (\Exception $e) {
             return false;
         }
+    }
+
+    public function getDefaultBranch($url)
+    {
+        $reportData = $this->getGitHubRepoInfo($url);
+
+        return Arr::get($reportData, 'default_branch', 'master');
     }
 }
