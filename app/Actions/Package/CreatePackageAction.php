@@ -6,6 +6,7 @@ namespace App\Actions\Package;
 use App\Events\Package\NewPackageCreated;
 use App\Package;
 use App\Services\Github\PackageExplorer;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 
 class CreatePackageAction
@@ -14,14 +15,20 @@ class CreatePackageAction
     {
         Log::info('Creating a package inside CreatePackageAction');
 
+        $description = null;
+
         $github_info = (new PackageExplorer())->getGitHubRepoInfo($package_url);
 
         if ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'composer')) {
-            $description = $content['description'];
+            $description = Arr::get($content, 'description', null);
         } elseif ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'package')) {
-            $description = $content['description'];
+            $description = Arr::get($content, 'description', null);
         } else {
-            $description = $github_info['description'];
+            $description = Arr::get($github_info, 'description', null);
+        }
+
+        if (empty($description)) {
+            $description = 'No description, website, or topics provided.';
         }
 
         $package = Package::create([
