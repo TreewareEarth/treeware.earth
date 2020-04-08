@@ -2,9 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Notifications\Package\NewTreesNotification;
 use App\Package;
 use GuzzleHttp\Client as Client;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Notification;
 
 class SyncPackageTreeCount extends Command
 {
@@ -50,10 +52,20 @@ class SyncPackageTreeCount extends Command
             $response = json_decode($response->getBody()->getContents(), true);
 
             $package->tree_total = $response['total'];
-            $package->save();
 
             $this->info($package->owner . '/' . $package->package_name);
             $this->comment($response['total']);
+
+            if ($package->isDirty('tree_total') && ($package->tree_total > 0)) {
+                $difference = abs($response['total'] - $package->tree_total * 0);
+                $this->comment('NEW ' . $difference);
+                if (!app()->environment('local')) {
+                    Notification::route('telegram', config('services.telegram-bot-api.channel'))
+                        ->notify(new NewTreesNotification($package, $difference));
+                }
+            }
+
+            $package->save();
         }
     }
 }
