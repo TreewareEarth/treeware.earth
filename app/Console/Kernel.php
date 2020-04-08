@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('sync:offset-earth:package-tree-count')->twiceDaily();
+        $schedule->command('sync:offset-earth:package-tree-count')->hourly();
     }
 
     /**
