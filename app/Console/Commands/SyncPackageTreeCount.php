@@ -7,6 +7,7 @@ use App\Package;
 use GuzzleHttp\Client as Client;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Str;
 
 class SyncPackageTreeCount extends Command
 {
@@ -46,7 +47,7 @@ class SyncPackageTreeCount extends Command
         foreach ($packages as $package) {
             $response = (new Client())->request('get', 'https://api.offset.earth/users/treeware/trees', [
                 'query' => [
-                    'ref' => md5($package->owner . '/' . $package->package_name),
+                    'ref' => md5(Str::lower($package->owner . '/' . $package->package_name)),
                 ],
             ]);
             $response = json_decode($response->getBody()->getContents(), true);
