@@ -1,8 +1,22 @@
 <template>
     <div>
-        <ais-instant-search :search-client="searchClient" index-name="package_name">
-            <ais-search-box placeholder="Owner Name / Package Name " class="searchbox" />
+        <ais-instant-search :search-client="searchClient" :index-name=listingBy>
+            <ais-search-box autofocus @keyup="searchText" placeholder="Owner Name / Package Name " class="searchbox" />
             <br><br>
+            <ul class="flex" style="margin-bottom: 15px;">
+                <li class="px-8 py-1 pl-0 ml-2">
+                    <span class="text-white text-xs">Sort By</span>
+                </li>
+                <li :class="listingBy == 'package_name' ? 'bg-blue-700' : ''" class="px-2 py-2 mr-2 text-xs cursor-pointer bg-blue-500 hover:bg-blue-700 rounded-sm" @click="sortDefault">
+                    <span class="text-white">recently added</span>
+                </li>
+                <li :class="listingBy == 'tree_sorted_package_name' ? 'bg-blue-700' : ''" class="px-2 py-2 mr-2 text-xs cursor-pointer bg-blue-500 hover:bg-blue-700 rounded-sm" @click="sortByTrees">
+                    <span class="text-white">trees contribution</span>
+                </li>
+                <li :class="listingBy == 'click_sorted_package_name' ? 'bg-blue-700' : ''" class="px-2 py-2 mr-2 text-xs cursor-pointer bg-blue-500 hover:bg-blue-700 rounded-sm" @click="sortByClick">
+                    <span class="text-white">badge clicks</span>
+                </li>
+            </ul>
             <ais-hits>
                 <a :href="item.package_url" target="_blank" class="relative w-full flex align-middle" slot="item" slot-scope="{ item }">
                     <div class="flex w-full">
@@ -37,15 +51,88 @@
     import algoliasearch from 'algoliasearch/lite';
     import 'instantsearch.css/themes/algolia-min.css';
 
+    // import InstantSearch from 'vue-instantsearch';
+    // Vue.use(InstantSearch);
+
     export default {
         data() {
             return {
+                listingBy: 'package_name',
                 searchClient: algoliasearch(
                     process.env.MIX_ALGOLIA_APP_ID,
                     process.env.MIX_ALGOLIA_SECRET_SEARCH_ONLY
                 ),
             };
         },
+        mounted() {
+            this.listingBy = 'package_name';
+            if(this.getQueryString('sortby') == 'trees' || false) {
+                this.listingBy = 'tree_sorted_package_name'
+            }
+            else if(this.getQueryString('sortby') == 'clicks' || false) {
+                this.listingBy = 'click_sorted_package_name'
+            }
+        },
+        methods: {
+            searchText($event) {
+                console.log($event.target.value);
+            },
+            sortDefault() {
+                this.listingBy = 'package_name';
+                this.updateURLParameter(window.location.href, 'sortby', 'default');
+            },
+            sortByClick() {
+                this.listingBy = 'click_sorted_package_name';
+                this.updateURLParameter(window.location.href, 'sortby', 'clicks');
+            },
+            sortByTrees() {
+                this.listingBy = 'tree_sorted_package_name';
+                this.updateURLParameter(window.location.href, 'sortby', 'trees');
+            },
+            getQueryString ( field, url ) {
+                var href = url ? url : window.location.href;
+                var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+                var string = reg.exec(href);
+                return string ? string[1] : null;
+            },
+            updateURLParameter(url, param, paramVal){
+                var newAdditionalURL = "";
+                var tempArray = url.split("?");
+                var baseURL = tempArray[0];
+                var additionalURL = tempArray[1];
+                var temp = "";
+                if (additionalURL) {
+                    tempArray = additionalURL.split("&");
+                    for (var i=0; i<tempArray.length; i++){
+                        if(tempArray[i].split('=')[0] != param){
+                            newAdditionalURL += temp + tempArray[i];
+                            temp = "&";
+                        }
+                    }
+                }
+
+                var rows_txt = temp + "" + param + "=" + paramVal;
+                window.history.replaceState({}, "", baseURL + "?" + newAdditionalURL + rows_txt);
+            },
+            updateQueryStringParam(param, value) {
+                const baseUrl = [location.protocol, '//', location.host, location.pathname].join('');
+                const urlQueryString = document.location.search;
+                var newParam = key + '=' + value,
+                    params = '?' + newParam;
+
+                // If the "search" string exists, then build params from it
+                if (urlQueryString) {
+                    keyRegex = new RegExp('([\?&])' + key + '[^&]*');
+                    // If param exists already, update it
+                    if (urlQueryString.match(keyRegex) !== null) {
+                        params = urlQueryString.replace(keyRegex, "$1" + newParam);
+                    } else { // Otherwise, add it to end of query string
+                        params = urlQueryString + '&' + newParam;
+                    }
+                }
+                window.history.replaceState({}, "", baseUrl + params);
+            }
+    }
     };
 </script>
 
