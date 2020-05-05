@@ -52,20 +52,23 @@ class SyncPackageTreeCount extends Command
             ]);
             $response = json_decode($response->getBody()->getContents(), true);
 
+            $this->info($package->owner . '/' . $package->package_name);
+
+            $originalTreeCount = $package->tree_total;
+            $this->comment('This package currently has ' . $originalTreeCount . ' trees.');
+
+            $this->comment('OffsetEarth tree count for this package is ' . $response['total'] . ' trees.');
+
             $package->tree_total = $response['total'];
 
-            $this->info($package->owner . '/' . $package->package_name);
-            $this->comment($response['total']);
-
             if ($package->isDirty('tree_total') && ($package->tree_total > 0)) {
-                $difference = abs($response['total'] - $package->tree_total * 0);
-                $this->comment('NEW ' . $difference);
+                $difference = ($response['total'] - $originalTreeCount);
+                $this->comment('NEW trees just added ' . $difference);
                 if (!app()->environment('local')) {
                     Notification::route('telegram', config('services.telegram-bot-api.channel'))
                         ->notify(new NewTreesNotification($package, $difference));
                 }
             }
-
             $package->save();
         }
     }
