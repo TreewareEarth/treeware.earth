@@ -1,6 +1,7 @@
 @extends('layout.app')
 @section('content')
 
+    <div id="app">
     <!-- start hero section -->
     <section class="relative bg-blue-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-12 pb-24 sm:pb-64 md:pt-26 md:pb-48 lg:pt-32 xl:pb-48 2xl:pt-48 2xl:pb-96 text-center sm:text-left">
         <div class="container mx-auto">
@@ -109,7 +110,7 @@
             </div>
         </div>
 
-        <div id="app">
+        <div>
             <package-add></package-add>
         </div>
     </section>
@@ -117,22 +118,17 @@
 
     <!-- start features -->
     <section class="relative bg-green-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 p-20">
-        <div class="text-center">
+        <div class="text-center max-w-2xl m-auto">
             <h2 class="text-3xl leading-tight font-bold text-white">The Treeware "conditions of use"</h2>
+            <p class="py-6 text-white">Below is "conditions of use" generator which you can use to generate for your project by adding owner/package_name.</p>
         </div>
 
-        <div class="w-full lg:w-1/2 mx-auto text-center">
-            <div class="py-6 text-white">
-                <p>Below is an sample "conditions of use" which you are free to use in your projects.</p>
-            </div>
-            <script src="https://gist.github.com/jamesmills/add9a716c17628494e58f684b2615c66.js"></script>
+        <div class="w-full mt-8 max-w-3xl m-auto text-center">
+            <licence-generator></licence-generator>
         </div>
 
-        <div class="w-1/2 mx-auto text-center">
-            <div class="py-6 text-white">
-                <p>Below is the Treeware badge which you can use in your project.</p>
-            </div>
-            <script src="https://gist.github.com/jamesmills/44504132a6434ee4d00fe66357fec94b.js"></script>
+        <div class="text-center max-w-2xl m-auto">
+            {{--<script src="https://gist.github.com/jamesmills/44504132a6434ee4d00fe66357fec94b.js"></script>--}}
         </div>
     </section>
     <!-- end features -->
@@ -208,7 +204,7 @@
         </div>
     </footer>
 
-
+    </div>
 
     <!-- end footer -->
 @endsection
