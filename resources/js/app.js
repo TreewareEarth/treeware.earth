@@ -7,6 +7,7 @@ Vue.use(InstantSearch);
 
 Vue.component('package-add', require('./components/PackageAdd.vue').default);
 Vue.component('package-search', require('./components/PackaseSearch.vue').default);
+Vue.component('licence-generator', require('./components/LicenceGenerator').default);
 
 const app = new Vue({
     el: '#app',
