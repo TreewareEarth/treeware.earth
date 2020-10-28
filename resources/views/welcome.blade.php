@@ -46,9 +46,9 @@
             <div class="w-full overflow-hidden lg:my-2 lg:px-2 lg:w-1/3 mb-2 lg:mb-0">
                 <div class="rounded overflow-hidden shadow-lg bg-white">
                     <div class="px-6 py-8">
-                        <div class="font-bold text-xl mb-2">1. Opensource Package</div>
+                        <div class="font-bold text-xl mb-2">1. Open Source Package</div>
                         <p class="text-gray-700 text-base leading-loose">
-                            You have an Opensource package and you would like to help support a sustainable future. You continue to offer your package under your current licence (e.g. MIT).
+                            You have an open source package and you would like to help support a sustainable future. You continue to offer your package under your current licence (e.g. MIT).
                         </p>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
 
         <div class="mt-12 md:mt-20 w-full md:max-w-3xl mx-auto">
             <p class="text-xl text-yellow-900 italic">
-                &ldquo;I've recently noticed a trend of people adding methods of accepting payment to their opensource packages. I definitely think there is a place for this but it did not seem right for the small packages I have released. I love the idea of Postcardware, but it did not seem like the right fit for me. When I read about the work Phil Sturgeon has done with Offset Earth regarding raising awareness of climate change, this was a huge inspiration to me. I started to wonder how I could do my bit for the environment, and then it hit me: Treeware was born.&rdquo;
+                &ldquo;I've recently noticed a trend of people adding methods of accepting payment to their open source packages. I definitely think there is a place for this but it did not seem right for the small packages I have released. I love the idea of Postcardware, but it did not seem like the right fit for me. When I read about the work Phil Sturgeon has done with Offset Earth regarding raising awareness of climate change, this was a huge inspiration to me. I started to wonder how I could do my bit for the environment, and then it hit me: Treeware was born.&rdquo;
             </p>
             <p class="text-xl font-bold text-green-700 mt-4">
                 <a href="https://jamesmills.co.uk">James Mills</a>
