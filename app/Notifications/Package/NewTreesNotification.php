@@ -4,11 +4,12 @@ namespace App\Notifications\Package;
 
 use App\Package;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Telegram\TelegramChannel;
 use NotificationChannels\Telegram\TelegramMessage;
 
-class NewTreesNotification extends Notification
+class NewTreesNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
