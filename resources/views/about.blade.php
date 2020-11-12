@@ -7,8 +7,8 @@
             <h2 class="text-3xl leading-tight font-bold py-8">About Treeware</h2>
 
             <p class="pb-6">
-                We have partnered with <a class="underline" href="https://offset.earth?r=5e186e68516eb60018c5172b">Offset Earth</a> to
-                plant trees & fund the world’s best climate crisis solutions. We chose Offset Earth because they operate
+                We have partnered with <a class="underline" href="https://ecologi.com?r=5e186e68516eb60018c5172b">Ecologi</a> to
+                plant trees & fund the world’s best climate crisis solutions. We chose Ecologi because they operate
                 transparently with a minimal service fee, which they reinvest to spread the message through social
                 marketing.
             </p>
@@ -35,7 +35,7 @@
 
             <p class="pb-6">
             Treeware began when <a class="underline" href="https://twitter.com/jamesmills">James Mills</a> and <a class="underline" href="https://twitter.com/philsturgeon">Phil Sturgeon</a>  were talking about Phil’s work on Protect Earth and his
-                <a class="underline" href="https://offset.earth/articles/climate-emergency/climate-change-by-bike">crazy solo European bike-tour fundraiser for Offset Earth</a>. James asked about a new “Buy me a tree” badge on
+                <a class="underline" href="https://ecologi.com/articles/climate-emergency/climate-change-by-bike">crazy solo European bike-tour fundraiser for Ecologi</a>. James asked about a new “Buy me a tree” badge on
             one of Phils GitHub repositories, and in a spin on open-source
                 <a class="underline" href="https://freek.dev/531-our-packages-are-now-postcardware">Postcardware</a> (made famous in the Laravel
             community by <a class="underline" href="https://twitter.com/freekmurze">Freek</a> from Spatie) the idea of Treeware was born.
@@ -50,9 +50,9 @@
             </p>
 
             <p class="pb-6">
-            If you have an Offset Earth profile you can update the link to redirect to your own profile. This could be a
+            If you have an Ecologi profile you can update the link to redirect to your own profile. This could be a
             personal account, or a business account if you’re one of the many businesses joining up to offset their
-            workforce. If you cannot afford the Offset Earth subscription, you can simply leave the default link in
+            workforce. If you cannot afford the Ecologi subscription, you can simply leave the default link in
             place to our Treeware profile. We understand that money is tight, but if you can sacrifice one coffee per
             month, you can quite literally make the world a better place.
             </p>
@@ -94,7 +94,7 @@
                         <a href="https://www.vecteezy.com/">Tree Illustration by Vecteezy</a>
                     </li>
                     <li class="mt-2">
-                        <a href="http://offset.earth/treeware">Offset Earth</a>
+                        <a href="http://ecologi.com/treeware">Ecologi</a>
                     </li>
                 </ul>
             </div>

@@ -41,6 +41,6 @@ class ClickController extends Controller
             dispatch(new CreatePackageIfHasLicence('https://github.com/' . $owner . '/' . $package_name));
         }
 
-        return redirect()->to('https://offset.earth/treeware?gift-trees&ref=' . md5(Str::lower($owner . '/' . $package_name)));
+        return redirect()->to('https://ecologi.com/treeware?gift-trees&ref=' . md5(Str::lower($owner . '/' . $package_name)));
     }
 }
