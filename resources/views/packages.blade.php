@@ -45,7 +45,7 @@
                         <a href="https://www.vecteezy.com/">Tree Illustration by Vecteezy</a>
                     </li>
                     <li class="mt-2">
-                        <a href="http://offset.earth/treeware">Offset Earth</a>
+                        <a href="http://ecologi.com/treeware">Ecologi</a>
                     </li>
                 </ul>
             </div>

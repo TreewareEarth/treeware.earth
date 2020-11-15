@@ -25,7 +25,7 @@
 
             <div class="text-yellow-900">
                 <p class="mb-4">
-                    We have partnered with <a href="https://offset.earth">Offset.Earth</a> who plant trees & fund the world’s best climate crisis solutions.
+                    We have partnered with <a href="https://ecologi.com">Ecologi</a> who plant trees & fund the world’s best climate crisis solutions.
                 </p>
 
                 {{--<p class="mb-12">--}}
@@ -58,7 +58,7 @@
                     <div class="px-6 py-8">
                         <div class="font-bold text-xl mb-2">2. Add Treeware</div>
                         <p class="text-gray-700 text-base leading-loose">
-                            Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forest on Offset.Earth.
+                            Update your README.md file to include our Treeware "conditions of use" text. This will provide people with a way to buy trees for the Treeware Forest on Ecologi.
                         </p>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
 
         <div class="mt-12 md:mt-20 w-full md:max-w-3xl mx-auto">
             <p class="text-xl text-yellow-900 italic">
-                &ldquo;I've recently noticed a trend of people adding methods of accepting payment to their open source packages. I definitely think there is a place for this but it did not seem right for the small packages I have released. I love the idea of Postcardware, but it did not seem like the right fit for me. When I read about the work Phil Sturgeon has done with Offset Earth regarding raising awareness of climate change, this was a huge inspiration to me. I started to wonder how I could do my bit for the environment, and then it hit me: Treeware was born.&rdquo;
+                &ldquo;I've recently noticed a trend of people adding methods of accepting payment to their open source packages. I definitely think there is a place for this but it did not seem right for the small packages I have released. I love the idea of Postcardware, but it did not seem like the right fit for me. When I read about the work Phil Sturgeon has done with Ecologi regarding raising awareness of climate change, this was a huge inspiration to me. I started to wonder how I could do my bit for the environment, and then it hit me: Treeware was born.&rdquo;
             </p>
             <p class="text-xl font-bold text-green-700 mt-4">
                 <a href="https://jamesmills.co.uk">James Mills</a>
@@ -142,8 +142,8 @@
                 &quot; We’re amassing a collective of packages built by awesome people in all corners of the world who want to use their skills to have a direct impact on climate action. &quot;
             </p>
 
-            <a href="https://offset.earth/treeware" target="_blank" rel="noopener noreferrer" title="View our Offset Earth profile" style="width:200px;display:inline-block;">
-                <img alt="We offset our carbon footprint via Offset Earth" src="https://toolkit.offset.earth/carbonpositiveworkforce/badge/5e186e68516eb60018c5172b?white=true&landscape=true" style="width:200px;" />
+            <a href="https://ecologi.com/treeware" target="_blank" rel="noopener noreferrer" title="View our Ecologi profile" style="width:200px;display:inline-block;">
+                <img alt="We offset our carbon footprint via Ecologi" src="https://toolkit.ecologi.com/badges/cpw/5d89d5df019c02000f33b95c?white=true&landscape=true" style="width:200px;" />
             </a>
         </div>
     </section>
@@ -192,7 +192,7 @@
                         <a href="https://www.vecteezy.com/">Tree Illustration by Vecteezy</a>
                     </li>
                     <li class="mt-2">
-                        <a href="http://offset.earth/treeware">Offset Earth</a>
+                        <a href="http://ecologi.com/treeware">Ecologi</a>
                     </li>
                 </ul>
             </div>
