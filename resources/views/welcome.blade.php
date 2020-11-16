@@ -143,7 +143,7 @@
             </p>
 
             <a href="https://ecologi.com/treeware" target="_blank" rel="noopener noreferrer" title="View our Ecologi profile" style="width:200px;display:inline-block;">
-                <img alt="We offset our carbon footprint via Ecologi" src="https://toolkit.ecologi.com/badges/cpw/5d89d5df019c02000f33b95c?white=true&landscape=true" style="width:200px;" />
+                <img alt="We offset our carbon footprint via Ecologi" src="https://toolkit.ecologi.com/badges/cpw/5e186e68516eb60018c5172b?white=true&landscape=true" style="width:200px;" />
             </a>
         </div>
     </section>
