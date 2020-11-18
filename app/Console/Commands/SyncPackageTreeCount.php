@@ -16,14 +16,14 @@ class SyncPackageTreeCount extends Command
      *
      * @var string
      */
-    protected $signature = 'sync:offset-earth:package-tree-count';
+    protected $signature = 'sync:ecologi:package-tree-count';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command to sync package tree count from Offset.Earth API';
+    protected $description = 'Command to sync package tree count from ecologi.com API';
 
     /**
      * Create a new command instance.
@@ -45,7 +45,7 @@ class SyncPackageTreeCount extends Command
         $packages = Package::all();
 
         foreach ($packages as $package) {
-            $response = (new Client())->request('get', 'https://api.offset.earth/users/treeware/trees', [
+            $response = (new Client())->request('get', 'https://api.ecologi.com/users/treeware/trees', [
                 'query' => [
                     'ref' => md5(Str::lower($package->owner . '/' . $package->package_name)),
                 ],
@@ -57,7 +57,7 @@ class SyncPackageTreeCount extends Command
             $originalTreeCount = $package->tree_total;
             $this->comment('This package currently has ' . $originalTreeCount . ' trees.');
 
-            $this->comment('OffsetEarth tree count for this package is ' . $response['total'] . ' trees.');
+            $this->comment('Ecologi tree count for this package is ' . $response['total'] . ' trees.');
 
             $package->tree_total = $response['total'];
 
