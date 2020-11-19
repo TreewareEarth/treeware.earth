@@ -33,8 +33,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/6a842a5050.js" crossorigin="anonymous"></script>
-
     <style type="text/css">
         * {
             font-family: 'Montserrat', sans-serif;
