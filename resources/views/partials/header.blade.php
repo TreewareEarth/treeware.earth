@@ -17,10 +17,10 @@
                 <li class="block"><a id="how-it-work-link" class="mr-2 sm:mr-4 text-blue-800 hover:text-blue-700 font-bold" href="{{ ($_SERVER['REQUEST_URI'] == '/') ? 'javascript:void(0)' : '/#how-it-work-section' }}">How It Works</a></li>
                 <li class="block"><a id="add-package-link" class="mr-2 sm:mr-4 text-blue-800 hover:text-blue-700 font-bold" href="{{ ($_SERVER['REQUEST_URI'] == '/') ? 'javascript:void(0)' : '/#add-package-section' }}">Add Package</a></li>
                 <li class="block"><a class="mr-2 sm:mr-4 text-blue-800 hover:text-blue-700 font-bold" href="/packages">Search Package</a></li>
-                <li class="mt-4 inline-block sm:mt-0 align-middle"><a class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://t.me/treeware"><i class="fa fa-telegram fa-sm"></i></a></li>
-                <li class="mt-4 inline-block sm:mt-0 align-middle"><a class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://twitter.com/TreewareEarth"><i class="fa fa-twitter fa-sm"></i></a></li>
-                <li class="mt-4 inline-block sm:mt-0 align-middle"><a class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://www.producthunt.com/posts/treeware"><i class="fa fa-product-hunt fa-sm"></i></a></li>
-                <li class="mt-4 inline-block sm:mt-0 align-middle"><a class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://github.com/TreewareEarth/treeware.earth"><i class="fa fa-github fa-lg"></i></a></li>
+                <li class="mt-4 inline-block sm:mt-0 align-middle"><a target="_blank" class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://t.me/treeware"><i class="fa fa-telegram fa-sm"></i></a></li>
+                <li class="mt-4 inline-block sm:mt-0 align-middle"><a target="_blank" class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://twitter.com/TreewareEarth"><i class="fa fa-twitter fa-sm"></i></a></li>
+                <li class="mt-4 inline-block sm:mt-0 align-middle"><a target="_blank" class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://www.producthunt.com/posts/treeware"><i class="fa fa-product-hunt fa-sm"></i></a></li>
+                <li class="mt-4 inline-block sm:mt-0 align-middle"><a target="_blank" class="text-base mr-2 sm:mr-4 text-blue-800 hover:text-blue-700" href="https://github.com/TreewareEarth/treeware.earth"><i class="fa fa-github fa-lg"></i></a></li>
             </ul>
         </div>
     </nav>
