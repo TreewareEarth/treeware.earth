@@ -3092,6 +3092,10 @@
   transition: 0.5s all ease;
 }
 
+.mobile-git-link {
+  display: none;
+}
+
 .ff-nav .hamburger {
   position: absolute;
   right: 0px;
@@ -3128,6 +3132,11 @@
     color: #fff;
     font-size: 22px;
     font-weight: bolder;
+  }
+
+  .ff-nav.active .mobile-git-link {
+    display: block;
+    z-index: 100000000000000020000;
   }
 }
 

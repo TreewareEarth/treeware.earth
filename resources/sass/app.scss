@@ -39,6 +39,9 @@
     transition: 0.5s all ease;
 }
 
+.mobile-git-link {
+    display: none;
+}
 
 .ff-nav {
     .hamburger {
@@ -79,7 +82,11 @@
                 font-size: 22px;
                 font-weight: bolder;
             }
-        }
 
+            .mobile-git-link {
+                display: block;
+                z-index: 99999999999999999999;
+            }       
+        }
     }
 }
