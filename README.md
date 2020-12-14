@@ -23,4 +23,3 @@ We would absolutely love any contributions to the project!
 ## Licence
     
 This project is [Treeware](https://treeware.earth). To support this project you can [**buy the world a tree**](https://plant.treeware.earth/TreewareEarth/treeware.earth) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
-
