@@ -20,7 +20,7 @@
                 <h2 class="text-2xl text-left pb-2 font-bold text-gray-900 block" style="border-bottom: 1px solid #f2f0f0">Licence</h2>
                 <p class="mt-8 text-left">This package is <span class="text-blue-700 font-bold">Treeware</span>. If you use it in production, then we ask that you <span class="licence-dummy text-blue-700 font-bold">[**buy the world a tree**](https://plant.treeware.earth/<span class="text-orange-800">{{ packageName == '' ? '{user}/{package}' : packageName }}</span>)</span> to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.</p>
             </div>
-            <i id="copy-licence-btn" @click="copyToClipboard(licenceText, $event)" title="click to copy" class="copy-licence-btn fas fa-clipboard cursor-pointer text-gray-400" style="font-size:24px;position:absolute;top:10px;right:10px"></i>
+            <i id="copy-licence-btn" @click="copyToClipboard(licenceText, $event)" title="click to copy" class="copy-licence-btn fa fa-clipboard cursor-pointer text-gray-400" style="font-size:24px;position:absolute;top:10px;right:10px"></i>
         </div>
         <div class="py-6 text-white">
             <p>Below are the Treeware badge which you can use in your project.</p>
