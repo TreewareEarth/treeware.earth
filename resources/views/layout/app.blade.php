@@ -33,8 +33,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/6a842a5050.js" crossorigin="anonymous"></script>
-
     <style type="text/css">
         * {
             font-family: 'Montserrat', sans-serif;
@@ -70,6 +68,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <script src="{{ mix('/js/app.js') }}"></script>
+@yield('script')
 
 <script>
 

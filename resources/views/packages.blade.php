@@ -1,4 +1,9 @@
 @extends('layout.app')
+
+@section('script')
+    <script src="{{ mix('/js/components/package-search.js') }}"></script>
+@endsection
+
 @section('content')
 
     <!-- package add form -->
