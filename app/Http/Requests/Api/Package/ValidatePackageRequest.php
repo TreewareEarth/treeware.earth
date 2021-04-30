@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Api\Package;
 
 use App\Rules\CheckGithubReadmeFile;
-use App\Rules\Treeware;
+use App\Rules\TreewareInReadme;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ValidatePackageRequest extends FormRequest
@@ -34,7 +34,7 @@ class ValidatePackageRequest extends FormRequest
          */
 
         return [
-            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new Treeware],
+            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new TreewareInReadme],
         ];
     }
 

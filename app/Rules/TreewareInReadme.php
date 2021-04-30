@@ -5,7 +5,7 @@ namespace App\Rules;
 use App\Services\Github\PackageExplorer;
 use Illuminate\Contracts\Validation\Rule;
 
-class Treeware implements Rule
+class TreewareInReadme implements Rule
 {
     /**
      * Create a new rule instance.
