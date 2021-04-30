@@ -19,9 +19,9 @@ class CreatePackageAction
 
         $github_info = (new PackageExplorer())->getGitHubRepoInfo($package_url);
 
-        if ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'composer')) {
+        if ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'composer.json')) {
             $description = Arr::get($content, 'description', null);
-        } elseif ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'package')) {
+        } elseif ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'package.json')) {
             $description = Arr::get($content, 'description', null);
         } else {
             $description = Arr::get($github_info, 'description', null);

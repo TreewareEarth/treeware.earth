@@ -19,12 +19,12 @@ class PackageExplorer
         return strpos(strtolower(($response->getBody())->getContents()), $text) == true;
     }
 
-    public function getJsonFileContent($url, $filename = 'composer')
+    public function getJsonFileContent($url, $filename = 'composer.json')
     {
         try {
             $response = (new Client())->request(
                 'GET',
-                'https://raw.githubusercontent.com' . (parse_url($url)['path']) . '/' . $this->getDefaultBranch($url) . '/' . $filename . '.json',
+                'https://raw.githubusercontent.com' . (parse_url($url)['path']) . '/' . $this->getDefaultBranch($url) . '/' . $filename,
                 [
                     'stream' => true,
                 ]
