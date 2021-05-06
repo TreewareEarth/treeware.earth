@@ -15,26 +15,25 @@ class CreatePackageAction
     {
         Log::info('Creating a package inside CreatePackageAction');
 
-        $description = null;
+        $package = new PackageExplorer();
+        $githubInfo = $package->getGitHubRepoInfo($package_url);
 
-        $github_info = (new PackageExplorer())->getGitHubRepoInfo($package_url);
-
-        if ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'composer')) {
-            $description = Arr::get($content, 'description', null);
-        } elseif ($content = (new PackageExplorer())->getJsonFileContent($package_url, 'package')) {
-            $description = Arr::get($content, 'description', null);
-        } else {
-            $description = Arr::get($github_info, 'description', null);
+        if ($content = $package->parseJsonFile($package_url, 'composer.json')) {
+            $description = Arr::get($content, 'description');
+        } elseif ($content = $package->parseJsonFile($package_url, 'package.json')) {
+            $description = Arr::get($content, 'description');
         }
 
-        if (empty($description)) {
-            $description = 'No description, website, or topics provided.';
+        if (is_null($description) || empty($description)) {
+            $description = Arr::get($githubInfo, 'description')
+                ? Arr::get($githubInfo, 'description')
+                : 'No description, website, or topics provided.';
         }
 
         $package = Package::create([
-            'owner' => $github_info['owner']['login'],
-            'package_name' => $github_info['name'],
-            'owner_avatar_url' => $github_info['owner']['avatar_url'],
+            'owner' => $githubInfo['owner']['login'],
+            'package_name' => $githubInfo['name'],
+            'owner_avatar_url' => $githubInfo['owner']['avatar_url'],
             'description' => $description,
             'package_url' => $package_url,
         ]);

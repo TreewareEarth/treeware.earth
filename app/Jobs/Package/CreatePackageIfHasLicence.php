@@ -4,7 +4,7 @@ namespace App\Jobs\Package;
 
 use App\Actions\Package\CreatePackageAction;
 use App\Rules\CheckGithubReadmeFile;
-use App\Rules\Treeware;
+use App\Rules\TreewareInReadme;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -40,7 +40,7 @@ class CreatePackageIfHasLicence implements ShouldQueue
         $validator = Validator::make([
             'package_url' => $this->package_url,
         ], [
-            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new Treeware],
+            'package_url' => ['bail', 'required', 'url', 'unique:packages', new CheckGithubReadmeFile, new TreewareInReadme],
         ]);
 
         if ($validator->fails()) {
